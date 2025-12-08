@@ -1,4 +1,4 @@
-path: ../demo_data
+path: /demo_data
 
 train: images/train
 val: images/val
