@@ -7,10 +7,10 @@ from tqdm import tqdm
 
 # Config
 ###################################
-IMG_DIR = "dataset/images"           # path to the base dataset
-ANNOT_DIR = "dataset/annotations"    # path to the base annotation
-OUT_DIR = "dataset/out_image"        # where the output images shall be saved
-OUT_DIR_ANNO = "dataset/out_txt"     # where the new annotations shall be saved
+IMG_DIR = "demo_data/images"           # path to the base dataset
+ANNOT_DIR = "demo_data/annotations"    # path to the base annotation
+OUT_DIR = "dataset/out_image"          # where the output images shall be saved
+OUT_DIR_ANNO = "dataset/annotations"   # where the new annotations shall be saved
 ####################################
 
 os.makedirs(OUT_DIR, exist_ok=True)
@@ -45,7 +45,7 @@ for pic in tqdm(image_files, desc="Processing images", unit="img", total=len(ima
 
     all_boxes = []
 
-    # gettin the mask (convert to booelans to int 0-255 for contours function) for each bbox
+    # getting the mask (convert to booelans to int 0-255 for contours function) for each bbox
     for i in range(len(results[0].masks.data)):
         mask = (results[0].masks.data[i].cpu().numpy() * 255).astype("uint8")
 
@@ -62,7 +62,7 @@ for pic in tqdm(image_files, desc="Processing images", unit="img", total=len(ima
         rect = cv2.minAreaRect(cnt)
         box = cv2.boxPoints(rect)
 
-        # normalize oriented box coordinates to achive YOLO format
+        # normalize oriented box coordinates to achieve YOLO format
         coords_norm = []
         for x_pt, y_pt in box:
             coords_norm.append(x_pt / w)
