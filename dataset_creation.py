@@ -38,6 +38,11 @@ for pic in tqdm(image_files, desc="Processing images", unit="img", total=len(ima
 
     # Get the bbox coordinates from txt
     bboxes, class_ids = get_bboxes(txt_path,[0,1,2,3],5,[2,3,4,5,6,7,8,9], sep =',')
+    # txt_path: path to the given annotation txt
+    # [0,1,2,3]: columns containing the bounding box's coordiantes
+    # 5: column containing the classes
+    #[2,3,4,5,6,7,8,9]: classes that we are interested in
+    
     if bboxes is None or len(bboxes) == 0: continue
 
     # segmentation on all bboxes using SAM
