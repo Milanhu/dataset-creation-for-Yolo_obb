@@ -1,8 +1,6 @@
-import cv2
-import os
-from ultralytics import SAM
-import numpy as np
-from get_bboxes import get_bboxes
-from tqdm import tqdm
-import os
-import shutil
+cv2
+os
+ultralytics
+numpy
+tqdm
+shutil
