@@ -5,10 +5,10 @@ model = YOLO("yolo11s-obb.pt")  # will auto-download
 
 results = model.train(
     data="data.yaml",
-    epochs=50,
+    epochs=5,
     imgsz=640,
-    batch=8,
+    batch=4,
     device=0,                 # use GPU assuming it's available
     project="results", 
-    name="y11s_obb_local_train_50epochs"
+    name="y11s_obb_custom"
 )
