@@ -1,4 +1,3 @@
-import torch
 from ultralytics import YOLO
 
 model = YOLO("yolo11s-obb.pt")  # will auto-download
