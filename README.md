@@ -23,3 +23,8 @@ Note: This creates copies of the images, so that it doesn't modify your base dat
 # Lastly, run the train.py
 This will start the training; please set the parameters to align with your goals.  
 
+# Result
+<img width="1884" height="710" alt="image" src="https://github.com/user-attachments/assets/2a980ccd-9b76-4b53-9b06-609a37c963f2" />
+<img width="1888" height="705" alt="image" src="https://github.com/user-attachments/assets/e84b4d38-7ccf-4535-b5e4-efb1cfaea692" />
+
+Note: The base Yolo11-obb was trained on the DOTA dataset, with vastly different annotations, that's why it performs poorly.
