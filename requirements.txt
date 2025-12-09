@@ -1,6 +1,4 @@
-cv2
-os
+opencv-python
 ultralytics
 numpy
 tqdm
-shutil
