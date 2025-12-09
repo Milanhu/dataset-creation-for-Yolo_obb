@@ -4,7 +4,7 @@ This repository provides a simple pipeline to create datasets for [YOLO-OBB](htt
 After the new dataset has been created, you can fine-tune a base YOLO-OBB model on it to obtain a better-performing model for your specific use case.
 
 ## Get started
-You can quickly test the pipeline using the included demo data (intended only to verify functionality, not for serious training).
+You can quickly test the pipeline using the included demo data (intended only to verify functionality, not for training).
 ### Install dependencies
 Clone the repository and install the required Python packages:
 ```bash
@@ -14,7 +14,7 @@ pip install -r requirements.txt
 
 This script creates new OBB annotation files using the following logic:
 
- 1.  For each provided axis-aligned bounding box, perform segmentation using SAM (Segment Anything Model for Ultralytics).
+ 1.  For each provided axis-aligned bounding box, perform segmentation using SAM (Segment Anything Model from Ultralytics).
 
  2.  For each mask, compute the minimum-area bounding box.
 
