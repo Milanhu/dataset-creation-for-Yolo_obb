@@ -21,7 +21,7 @@ This will get your files, needed for the training, in the right structure. If yo
 Note: This creates copies of the images, so that it doesn't modify your base dataset. If you wish to train on huge amounts of images, this is recommended to be modified. 
 
 # Lastly, run the train.py
-This will start the training; please set the parameters to align with your goals.  
+This will start the training; please set the parameters to align with your goals. If GPU is available, definetly use 'device=0' in the argument.
 
 # Result (left: base model; right: custom model)
 <img width="1884" height="710" alt="image" src="https://github.com/user-attachments/assets/2a980ccd-9b76-4b53-9b06-609a37c963f2" />
