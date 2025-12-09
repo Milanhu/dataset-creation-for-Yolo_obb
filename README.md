@@ -24,7 +24,7 @@ Note: This code was written for the VisDrone dataset as provided by Ultralytics.
 If your dataset’s annotations use a different format, you will need to adapt the conversion logic in ```dataset_creation.py.```
 
 ## Prepare data for training (Run: ```prepare_for_training.py```)
-This will get your files, needed for the training, in the right structure. If you wish to modify this, you shall modify the data.yaml as well.
+This will get your files, needed for the training, in the right structure. If you wish to modify this, you shall modify the ```data.yaml``` as well.
 
 Note: This creates copies of the images, so that it doesn't modify your base dataset. If you wish to train on huge amounts of images, this is recommended to be modified. 
 
